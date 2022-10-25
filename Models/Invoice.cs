@@ -44,21 +44,14 @@ namespace Sunniva_Eggen_Appolonia.Models
                 PriceEurWithDiscount = price.PriceInEuro * NumberOfTickets * 0.85;
                 PriceUSDWithDiscount = price.PriceInDollar * NumberOfTickets * 0.85;
             }
-            
 
-            //Adding the element to xml
-            var filename = "Invoice.xml";
-            var currentDirectory = Directory.GetCurrentDirectory();
-            var drawsDirectoryFilepath = Path.Combine(currentDirectory, filename);
-            //XElement drawsDirectory = XElement.Load(drawsDirectoryFilepath);
-            //drawsDirectory.Add(new XElement("Invoice", new XAttribute("id", UID), new XElement("LocalTime", LocalTime),
-            //    new XElement("UTCTime", UTCTime), new XElement("Numbers", new XElement("nr1", Numbers[0]),
-            //    new XElement("nr2", Numbers[1]), new XElement("nr3", Numbers[2]), new XElement("nr4", Numbers[3]),
-            //    new XElement("nr5", Numbers[4]), new XElement("nr6", Numbers[5]), new XElement("nr7", Numbers[6]),
-            //    new XElement("nr8", Numbers[7]), new XElement("nr9", Numbers[8])
-            //    )));
-
-            //drawsDirectory.Save("Draws.xml");
+            var filename = "Invoice.txt";
+            string textToWrite = $"FirstName: {FirstName}, LastName: {LastName}, Invoice date: {InvoiceDate}, Number of tickets bought: {NumberOfTickets}, " +
+                $"Price before discount: {PriceEurWithoutDiscount} EUR, Price after discount: {PriceEurWithDiscount}";
+            FileStream outputstream=new FileStream(filename, FileMode.OpenOrCreate, FileAccess.Write);
+            StreamWriter sw=new StreamWriter(outputstream);
+            sw.Write(textToWrite);
+            sw.Close();
         }
     }
 }
