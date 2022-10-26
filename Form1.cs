@@ -128,6 +128,8 @@ namespace Sunniva_Eggen_Appolonia
         {
             Price price = new Price();
             price.GetTicketPrice();
+            string textToWrite = price.CreateFile();
+            txtPrices.Text = textToWrite;
         }
 
         private void btnInvoice_Click(object sender, EventArgs e)
@@ -144,9 +146,9 @@ namespace Sunniva_Eggen_Appolonia
                 MessageBox.Show("Type in valid number");
                 throw;
             }
-            
+            string invoiceNumber=txtInvoiceNumber.Text;
             Invoice invoice = new Invoice();
-            invoice.CreateInvoice(firstName, lastName,numberOfTickets);
+            invoice.CreateInvoice(firstName, lastName,numberOfTickets, invoiceNumber);
         }
 
         private void btnStatistics_Click(object sender, EventArgs e)

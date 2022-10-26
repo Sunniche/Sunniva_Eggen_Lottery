@@ -40,8 +40,10 @@
             this.lblNumberOfTickets = new System.Windows.Forms.Label();
             this.txtStatistics = new System.Windows.Forms.TextBox();
             this.txtDraw = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPrices = new System.Windows.Forms.TextBox();
             this.formsPlot1 = new ScottPlot.FormsPlot();
+            this.txtInvoiceNumber = new System.Windows.Forms.TextBox();
+            this.lblInvoiceNumber = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnDraw
@@ -76,7 +78,7 @@
             // 
             // btnStatistics
             // 
-            this.btnStatistics.Location = new System.Drawing.Point(1045, 95);
+            this.btnStatistics.Location = new System.Drawing.Point(1045, 64);
             this.btnStatistics.Name = "btnStatistics";
             this.btnStatistics.Size = new System.Drawing.Size(184, 34);
             this.btnStatistics.TabIndex = 3;
@@ -144,32 +146,50 @@
             // 
             this.txtDraw.Location = new System.Drawing.Point(208, 39);
             this.txtDraw.Name = "txtDraw";
-            this.txtDraw.Size = new System.Drawing.Size(785, 31);
+            this.txtDraw.Size = new System.Drawing.Size(716, 31);
             this.txtDraw.TabIndex = 11;
             // 
-            // textBox1
+            // txtPrices
             // 
-            this.textBox1.Location = new System.Drawing.Point(74, 430);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(341, 234);
-            this.textBox1.TabIndex = 12;
+            this.txtPrices.Location = new System.Drawing.Point(74, 392);
+            this.txtPrices.Multiline = true;
+            this.txtPrices.Name = "txtPrices";
+            this.txtPrices.Size = new System.Drawing.Size(426, 205);
+            this.txtPrices.TabIndex = 12;
             // 
             // formsPlot1
             // 
-            this.formsPlot1.Location = new System.Drawing.Point(491, 145);
+            this.formsPlot1.Location = new System.Drawing.Point(509, 184);
             this.formsPlot1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.formsPlot1.Name = "formsPlot1";
             this.formsPlot1.Size = new System.Drawing.Size(527, 539);
             this.formsPlot1.TabIndex = 13;
+            // 
+            // txtInvoiceNumber
+            // 
+            this.txtInvoiceNumber.Location = new System.Drawing.Point(265, 258);
+            this.txtInvoiceNumber.Name = "txtInvoiceNumber";
+            this.txtInvoiceNumber.Size = new System.Drawing.Size(150, 31);
+            this.txtInvoiceNumber.TabIndex = 14;
+            // 
+            // lblInvoiceNumber
+            // 
+            this.lblInvoiceNumber.AutoSize = true;
+            this.lblInvoiceNumber.Location = new System.Drawing.Point(74, 264);
+            this.lblInvoiceNumber.Name = "lblInvoiceNumber";
+            this.lblInvoiceNumber.Size = new System.Drawing.Size(101, 25);
+            this.lblInvoiceNumber.TabIndex = 15;
+            this.lblInvoiceNumber.Text = "Invoice No:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1329, 727);
+            this.Controls.Add(this.lblInvoiceNumber);
+            this.Controls.Add(this.txtInvoiceNumber);
             this.Controls.Add(this.formsPlot1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPrices);
             this.Controls.Add(this.txtDraw);
             this.Controls.Add(this.txtStatistics);
             this.Controls.Add(this.lblNumberOfTickets);
@@ -203,7 +223,9 @@
         private Label lblNumberOfTickets;
         private TextBox txtStatistics;
         private TextBox txtDraw;
-        private TextBox textBox1;
+        private TextBox txtPrices;
         private ScottPlot.FormsPlot formsPlot1;
+        private TextBox txtInvoiceNumber;
+        private Label lblInvoiceNumber;
     }
 }

@@ -15,9 +15,9 @@ namespace Sunniva_Eggen_Appolonia.Models
         public double PriceInSwissFranc { get; set; }
         public double PriceInYen { get; set; }
 
-        public double EurToDollar { get; set; } /*= 0.9730;*/
-        public double EurToSwissFranc { get; set; } /*= 0.9855;*/
-        public double EurToYen { get; set; } /*= 147.59;*/
+        public double EurToDollar { get; set; }
+        public double EurToSwissFranc { get; set; }
+        public double EurToYen { get; set; } 
 
         public void GetCurrency()
         {
@@ -45,18 +45,35 @@ namespace Sunniva_Eggen_Appolonia.Models
                 attList.Add(new MapXmlCurrency(cur, rate));
             }
 
-            //EurToDollar = Convert.ToDouble(attList[0].Rate);
-
             EurToDollar = Convert.ToDouble(attList[0].Rate.Replace(".", ","));
             EurToYen = Convert.ToDouble(attList[1].Rate.Replace(".", ","));
             EurToSwissFranc = Convert.ToDouble(attList[10].Rate.Replace(".", ","));
         }
+
         public void GetTicketPrice()
         {
             GetCurrency();
             PriceInDollar = PriceInEuro * EurToDollar;
             PriceInSwissFranc = PriceInEuro * EurToSwissFranc;
             PriceInYen = PriceInEuro * EurToYen;
+        }
+
+        public string CreateFile()
+        {
+            string textToWrite = "";
+            var filename = "Prices.txt";
+            textToWrite = $"Exchange rate EUR to USD: {EurToDollar} \n" +
+                $"Exchange rate EUR to JPY: {EurToYen}\n" +
+                $"Exchange rate EUR to CHF: {EurToSwissFranc}\r\n" +
+                $"Price of a ticket in Euro: {PriceInEuro}EUR\r\n" +
+                $"Price of a ticket in Dollar: {PriceInDollar}USD\r\n" +
+                $"Price of a ticket in Yen: {PriceInYen}JPY\r\n" +
+                $"Price of a ticket in Swiss Franc: {PriceInSwissFranc}CHF";
+            FileStream outputstream = new FileStream(filename, FileMode.OpenOrCreate, FileAccess.Write);
+            StreamWriter sw = new StreamWriter(outputstream);
+            sw.Write(textToWrite);
+            sw.Close();
+            return textToWrite;
         }
     }
 }
