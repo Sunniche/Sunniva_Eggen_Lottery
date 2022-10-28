@@ -62,13 +62,17 @@ namespace Sunniva_Eggen_Appolonia.Models
         {
             string textToWrite = "";
             var filename = "Prices.txt";
-            textToWrite = $"Exchange rate EUR to USD: {EurToDollar} \n" +
-                $"Exchange rate EUR to JPY: {EurToYen}\n" +
-                $"Exchange rate EUR to CHF: {EurToSwissFranc}\r\n" +
-                $"Price of a ticket in Euro: {PriceInEuro}EUR\r\n" +
-                $"Price of a ticket in Dollar: {PriceInDollar}USD\r\n" +
-                $"Price of a ticket in Yen: {PriceInYen}JPY\r\n" +
-                $"Price of a ticket in Swiss Franc: {PriceInSwissFranc}CHF";
+
+            textToWrite = $"Exchange rates:\r\n" +
+                $"\t - EUR to USD: {Math.Round(EurToDollar, 4)} \r\n" +
+                $"\t - EUR to JPY: {Math.Round(EurToYen, 4)}\r\n" +
+                $"\t - EUR to CHF: {Math.Round(EurToSwissFranc, 4)}\r\n \r\n" +
+                $"Price of a ticket:\r\n" +
+                $"\t - In Euro: {Math.Round(PriceInEuro,2)} EUR\r\n" +
+                $"\t - In Dollar: {Math.Round(PriceInDollar,2)} USD\r\n" +
+                $"\t - In Yen: {Math.Round(PriceInYen,2)} JPY\r\n" +
+                $"\t - In Swiss Franc: {Math.Round(PriceInSwissFranc, 2)} CHF";
+
             FileStream outputstream = new FileStream(filename, FileMode.OpenOrCreate, FileAccess.Write);
             StreamWriter sw = new StreamWriter(outputstream);
             sw.Write(textToWrite);

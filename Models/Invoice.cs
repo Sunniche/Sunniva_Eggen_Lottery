@@ -45,7 +45,7 @@ namespace Sunniva_Eggen_Appolonia.Models
                 PriceUSDWithDiscount = price.PriceInDollar * NumberOfTickets * 0.85;
             }
 
-            var filename = "Invoice.txt";
+            var filename = $"Invoice_{InvoiceNumber}.txt";
             string textToWrite = $"First Name: {FirstName}\r\n" +
                 $"Last Name: {LastName}\r\n" +
                 $"Invoice number: {InvoiceNumber}\r\n" +

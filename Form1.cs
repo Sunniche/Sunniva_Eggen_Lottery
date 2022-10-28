@@ -21,7 +21,6 @@ namespace Sunniva_Eggen_Appolonia
             //Everytime the user clicks ont the button, a new Draw object is created. Its method AddDraw(int uid) is called upon
             Draw draw = new Draw();
             draw.AddDraw();
-
             txtDraw.AppendText(draw.Numbers[0].ToString() +"\t"+ (draw.Numbers[1].ToString()) + "\t" + (draw.Numbers[2].ToString()) + "\t" +
                 (draw.Numbers[3].ToString()) + "\t" + (draw.Numbers[4].ToString()) + "\t" + (draw.Numbers[5].ToString()) + "\t" + 
                 (draw.Numbers[6].ToString()) + "\t" + (draw.Numbers[7].ToString()) + "\t" + (draw.Numbers[8].ToString()));
@@ -50,6 +49,7 @@ namespace Sunniva_Eggen_Appolonia
             int numberOfNineteens = 0;
             int numberOfTwenties = 0;
 
+            //Counts the number of times each number appeared
             foreach (Draw d in ListOfDraws)
             {
                 foreach (int number in d.Numbers)
@@ -179,10 +179,15 @@ namespace Sunniva_Eggen_Appolonia
             formsPlot1.Plot.AddBar(dataY, dataX);
             formsPlot1.Refresh();
         }
+
+        private void txtStatistics_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
         
-        public class Draws
-        {
-            public List<Draws> ListOfDraws=new List<Draws>();
-        }
+        //public class Draws
+        //{
+        //    public List<Draws> ListOfDraws=new List<Draws>();
+        //}
     }

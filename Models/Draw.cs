@@ -33,7 +33,6 @@ namespace Sunniva_Eggen_Appolonia.Models
             
 
             //Increment UID by 1, and add it to the list of UIDs
-            //UID = uid;
             if (Ids.Count == 0)
             {
                 UID = 1;
@@ -42,7 +41,6 @@ namespace Sunniva_Eggen_Appolonia.Models
             {
                 UID = Ids.Last() + 1;
             }
-            //UID = Ids.Last() + 1;
             //Generate the current local DateTime value
             LocalTime = DateTime.Now;
 
@@ -57,8 +55,6 @@ namespace Sunniva_Eggen_Appolonia.Models
                 Numbers.Add(number);
             }
 
-            //drawsDirectory.Add(new XElement("Draw", new XAttribute("id", UID), new XElement("LocalTime", LocalTime),
-            //    new XElement("UTCTime", UTCTime)));
             drawsDirectory.Add(new XElement("Draw", new XAttribute("id", UID), new XElement("LocalTime", LocalTime),
                 new XElement("UTCTime", UTCTime), new XElement("Numbers", new XElement("nr1", Numbers[0]),
                 new XElement("nr2", Numbers[1]), new XElement("nr3", Numbers[2]), new XElement("nr4", Numbers[3]),
