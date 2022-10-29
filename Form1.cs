@@ -19,6 +19,7 @@ namespace Sunniva_Eggen_Appolonia
         private void btnDraw_Click(object sender, EventArgs e)
         {
             //Everytime the user clicks ont the button, a new Draw object is created. Its method AddDraw(int uid) is called upon
+            txtDraw.Clear();
             Draw draw = new Draw();
             draw.AddDraw();
             txtDraw.AppendText(draw.Numbers[0].ToString() +"\t"+ (draw.Numbers[1].ToString()) + "\t" + (draw.Numbers[2].ToString()) + "\t" +

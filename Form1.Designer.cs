@@ -61,7 +61,7 @@
             // 
             // btnPrice
             // 
-            this.btnPrice.Location = new System.Drawing.Point(74, 384);
+            this.btnPrice.Location = new System.Drawing.Point(74, 368);
             this.btnPrice.Name = "btnPrice";
             this.btnPrice.Size = new System.Drawing.Size(184, 34);
             this.btnPrice.TabIndex = 1;
@@ -71,7 +71,7 @@
             // 
             // btnInvoice
             // 
-            this.btnInvoice.Location = new System.Drawing.Point(74, 154);
+            this.btnInvoice.Location = new System.Drawing.Point(74, 99);
             this.btnInvoice.Name = "btnInvoice";
             this.btnInvoice.Size = new System.Drawing.Size(180, 34);
             this.btnInvoice.TabIndex = 2;
@@ -91,21 +91,21 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(265, 204);
+            this.txtFirstName.Location = new System.Drawing.Point(265, 149);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(150, 31);
             this.txtFirstName.TabIndex = 4;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(265, 243);
+            this.txtLastName.Location = new System.Drawing.Point(265, 188);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(150, 31);
             this.txtLastName.TabIndex = 5;
             // 
             // txtNumberOfTickets
             // 
-            this.txtNumberOfTickets.Location = new System.Drawing.Point(265, 280);
+            this.txtNumberOfTickets.Location = new System.Drawing.Point(265, 225);
             this.txtNumberOfTickets.Name = "txtNumberOfTickets";
             this.txtNumberOfTickets.Size = new System.Drawing.Size(150, 31);
             this.txtNumberOfTickets.TabIndex = 6;
@@ -113,7 +113,7 @@
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(74, 207);
+            this.lblFirstName.Location = new System.Drawing.Point(74, 152);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(101, 25);
             this.lblFirstName.TabIndex = 14;
@@ -122,7 +122,7 @@
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(74, 249);
+            this.lblLastName.Location = new System.Drawing.Point(74, 194);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(99, 25);
             this.lblLastName.TabIndex = 8;
@@ -131,7 +131,7 @@
             // lblNumberOfTickets
             // 
             this.lblNumberOfTickets.AutoSize = true;
-            this.lblNumberOfTickets.Location = new System.Drawing.Point(74, 286);
+            this.lblNumberOfTickets.Location = new System.Drawing.Point(74, 231);
             this.lblNumberOfTickets.Name = "lblNumberOfTickets";
             this.lblNumberOfTickets.Size = new System.Drawing.Size(161, 25);
             this.lblNumberOfTickets.TabIndex = 9;
@@ -142,7 +142,7 @@
             this.txtStatistics.Location = new System.Drawing.Point(1045, 161);
             this.txtStatistics.Multiline = true;
             this.txtStatistics.Name = "txtStatistics";
-            this.txtStatistics.Size = new System.Drawing.Size(254, 537);
+            this.txtStatistics.Size = new System.Drawing.Size(254, 526);
             this.txtStatistics.TabIndex = 10;
             this.txtStatistics.TextChanged += new System.EventHandler(this.txtStatistics_TextChanged);
             // 
@@ -155,7 +155,7 @@
             // 
             // txtPrices
             // 
-            this.txtPrices.Location = new System.Drawing.Point(74, 438);
+            this.txtPrices.Location = new System.Drawing.Point(74, 422);
             this.txtPrices.Multiline = true;
             this.txtPrices.Name = "txtPrices";
             this.txtPrices.Size = new System.Drawing.Size(341, 260);
@@ -171,7 +171,7 @@
             // 
             // txtInvoiceNumber
             // 
-            this.txtInvoiceNumber.Location = new System.Drawing.Point(265, 317);
+            this.txtInvoiceNumber.Location = new System.Drawing.Point(265, 262);
             this.txtInvoiceNumber.Name = "txtInvoiceNumber";
             this.txtInvoiceNumber.Size = new System.Drawing.Size(150, 31);
             this.txtInvoiceNumber.TabIndex = 7;
@@ -179,7 +179,7 @@
             // lblInvoiceNumber
             // 
             this.lblInvoiceNumber.AutoSize = true;
-            this.lblInvoiceNumber.Location = new System.Drawing.Point(74, 323);
+            this.lblInvoiceNumber.Location = new System.Drawing.Point(74, 268);
             this.lblInvoiceNumber.Name = "lblInvoiceNumber";
             this.lblInvoiceNumber.Size = new System.Drawing.Size(101, 25);
             this.lblInvoiceNumber.TabIndex = 15;
