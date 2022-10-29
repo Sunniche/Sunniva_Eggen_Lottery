@@ -8,8 +8,8 @@ using System.Xml.Serialization;
 
 namespace Sunniva_Eggen_Appolonia.Models
 {
-    [Serializable]
-    [XmlRoot("Draws")]
+    //[Serializable]
+    //[XmlRoot("Draws")]
     public class Draw
     {
         
