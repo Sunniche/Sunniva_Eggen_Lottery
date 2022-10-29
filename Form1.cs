@@ -145,7 +145,8 @@ namespace Sunniva_Eggen_Appolonia
             string firstName = txtFirstName.Text;
             string lastName = txtLastName.Text;
             int numberOfTickets = 0;
-            
+            string invoiceNumber = txtInvoiceNumber.Text;
+
             //If-statement handles the possibility that the user did not type the number of tickets purchased in a correct in format
             if (int.TryParse(txtNumberOfTickets.Text, out int number))
             {
@@ -156,7 +157,6 @@ namespace Sunniva_Eggen_Appolonia
                 MessageBox.Show("Type in valid number.");
             }
 
-            string invoiceNumber=txtInvoiceNumber.Text;
 
             if (!string.IsNullOrEmpty(firstName)&& !string.IsNullOrEmpty(lastName)&& numberOfTickets >=0&&!string.IsNullOrEmpty(invoiceNumber))
             {
