@@ -64,7 +64,7 @@ namespace Sunniva_Eggen_Appolonia.Models
         public string CreateFile()
         {
             string textToWrite = "";
-            var filename = "Prices.txt";
+            var filename = $"Prices_{DateTime.Now.ToString("yyyy.MM.dd")}.txt";
 
             textToWrite = $"Exchange rates:\r\n" +
                 $"\t - EUR to USD: {Math.Round(EurToDollar, 4)} \r\n" +
