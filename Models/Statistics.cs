@@ -9,6 +9,7 @@ namespace Sunniva_Eggen_Appolonia.Models
 {
     public class Statistics
     {
+        #region Properties
         public List<int> ListOfDrawsPerNumber = new List<int>();
         public List<double> ListOfPercentages = new List<double>();
         public double TotalNumbers { get; set; } = 0;
@@ -32,8 +33,10 @@ namespace Sunniva_Eggen_Appolonia.Models
         public List<XElement> numbers= new List<XElement>();
         public List<XElement> Numbers { get { return numbers; } set { numbers = value; } }
 
-
         public string filename = "";
+        #endregion
+
+        #region Methods
         public void DeserializeXMLFile()
         {
             var filename = "Draws.xml";
@@ -275,5 +278,6 @@ namespace Sunniva_Eggen_Appolonia.Models
             ListOfPercentages.Add(nineteensInPercentage);
             ListOfPercentages.Add(twentiesInPercentage);
         }
+        #endregion
     }
 }

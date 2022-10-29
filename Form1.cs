@@ -55,7 +55,6 @@ namespace Sunniva_Eggen_Appolonia
             {
                 foreach (int number in d.Numbers)
                 {
-                    
                     switch (number)
                     {
                         case 1:

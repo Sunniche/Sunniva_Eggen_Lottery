@@ -9,6 +9,7 @@ namespace Sunniva_Eggen_Appolonia.Models
 {
     public class Invoice
     {
+        #region Properties
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public string? InvoiceNumber { get; set; } 
@@ -18,8 +19,9 @@ namespace Sunniva_Eggen_Appolonia.Models
         public double PriceUSDWithoutDiscount { get; set; }
         public double PriceEurWithDiscount { get; set; }
         public double PriceUSDWithDiscount { get; set; }
+        #endregion
 
-
+        #region Methods
         public void CreateInvoice(string firstName, string lastName, int numberOfTickets, string invoiceNumber)
         {
             FirstName = firstName;
@@ -60,5 +62,6 @@ namespace Sunniva_Eggen_Appolonia.Models
             sw.Write(textToWrite);
             sw.Close();
         }
+        #endregion
     }
 }

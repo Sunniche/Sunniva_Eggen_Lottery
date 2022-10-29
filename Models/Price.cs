@@ -10,6 +10,7 @@ namespace Sunniva_Eggen_Appolonia.Models
 {
     public class Price
     {
+        #region Properties
         public double PriceInEuro { get; set; } = 5.0;
         public double PriceInDollar { get; set; }
         public double PriceInSwissFranc { get; set; }
@@ -17,8 +18,10 @@ namespace Sunniva_Eggen_Appolonia.Models
 
         public double EurToDollar { get; set; }
         public double EurToSwissFranc { get; set; }
-        public double EurToYen { get; set; } 
+        public double EurToYen { get; set; }
+        #endregion
 
+        #region Methods
         public void GetCurrency()
         {
             string uri = "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml";
@@ -79,5 +82,6 @@ namespace Sunniva_Eggen_Appolonia.Models
             sw.Close();
             return textToWrite;
         }
+        #endregion
     }
 }
