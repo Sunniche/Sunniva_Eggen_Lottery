@@ -8,6 +8,7 @@ namespace Sunniva_Eggen_Appolonia.Models
 {
     public class MapXmlDraw
     {
+        #region Properties
         public int id { get; set; }
         public DateTime LocalTime { get; set; }
         public DateTime UTCTime { get; set; }
@@ -20,6 +21,6 @@ namespace Sunniva_Eggen_Appolonia.Models
         public int nr7 { get; set; }
         public int nr8 { get; set; }
         public int nr9 { get; set; }
-
+        #endregion
     }
 }
