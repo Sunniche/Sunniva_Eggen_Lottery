@@ -137,15 +137,16 @@ namespace Sunniva_Eggen_Appolonia
             string firstName = txtFirstName.Text;
             string lastName = txtLastName.Text;
             int numberOfTickets = 0;
-            try
+
+            if (int.TryParse(txtNumberOfTickets.Text, out int number))
             {
-                numberOfTickets = Convert.ToInt32(txtNumberOfTickets.Text);
+                numberOfTickets = number;
             }
-            catch (Exception)
+            else
             {
                 MessageBox.Show("Type in valid number");
-                throw;
             }
+
             string invoiceNumber=txtInvoiceNumber.Text;
             Invoice invoice = new Invoice();
             invoice.CreateInvoice(firstName, lastName,numberOfTickets, invoiceNumber);
