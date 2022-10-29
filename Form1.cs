@@ -26,8 +26,6 @@ namespace Sunniva_Eggen_Appolonia
                 (draw.Numbers[6].ToString()) + "\t" + (draw.Numbers[7].ToString()) + "\t" + (draw.Numbers[8].ToString()));
 
             //The new Draw object is added to the list of Draws
-            
-
             ListOfDraws.Add(draw);
 
             int numberOfOnes=0;
@@ -189,9 +187,4 @@ namespace Sunniva_Eggen_Appolonia
 
         }
     }
-        
-        //public class Draws
-        //{
-        //    public List<Draws> ListOfDraws=new List<Draws>();
-        //}
-    }
+}
