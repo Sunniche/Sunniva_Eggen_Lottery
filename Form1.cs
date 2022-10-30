@@ -181,8 +181,8 @@ namespace Sunniva_Eggen_Appolonia
 
             //Converts read data into Draw objects
             stats.MapClasses();
-            //stats.CountRepartitionOfNumbers();
 
+            //Handles the combobox
             DateTime period=new DateTime();
             if (cboPeriod.Text == "All Periods")
             {
