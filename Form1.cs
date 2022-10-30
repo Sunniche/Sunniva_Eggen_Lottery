@@ -181,7 +181,29 @@ namespace Sunniva_Eggen_Appolonia
 
             //Converts read data into Draw objects
             stats.MapClasses();
-            stats.CountRepartitionOfNumbers();
+            //stats.CountRepartitionOfNumbers();
+
+            DateTime period=new DateTime();
+            if (cboPeriod.Text == "All Periods")
+            {
+                period = Convert.ToDateTime("01.01.0001");
+            }
+            else if (cboPeriod.Text == "Last Month")
+            {
+                period = DateTime.Now.AddMonths(-1);
+            }
+            else if (cboPeriod.Text == "Last Week")
+            {
+                period = DateTime.Now.AddDays(-7);
+            }
+            else if (cboPeriod.Text == "Last Day")
+            {
+                period = DateTime.Now.AddDays(-1);
+            }
+            stats.CountRepartitionOfNumbers(period);
+            
+            
+            
             stats.CalculatePercentages();
 
             txtStatistics.Clear();

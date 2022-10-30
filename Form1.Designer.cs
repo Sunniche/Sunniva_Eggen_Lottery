@@ -47,6 +47,8 @@
             this.lblNumber = new System.Windows.Forms.Label();
             this.lblCount = new System.Windows.Forms.Label();
             this.lblPercentage = new System.Windows.Forms.Label();
+            this.cboPeriod = new System.Windows.Forms.ComboBox();
+            this.lblPeriod = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnDraw
@@ -61,7 +63,7 @@
             // 
             // btnPrice
             // 
-            this.btnPrice.Location = new System.Drawing.Point(74, 368);
+            this.btnPrice.Location = new System.Drawing.Point(74, 404);
             this.btnPrice.Name = "btnPrice";
             this.btnPrice.Size = new System.Drawing.Size(184, 34);
             this.btnPrice.TabIndex = 1;
@@ -71,7 +73,7 @@
             // 
             // btnInvoice
             // 
-            this.btnInvoice.Location = new System.Drawing.Point(74, 99);
+            this.btnInvoice.Location = new System.Drawing.Point(74, 159);
             this.btnInvoice.Name = "btnInvoice";
             this.btnInvoice.Size = new System.Drawing.Size(180, 34);
             this.btnInvoice.TabIndex = 2;
@@ -81,9 +83,9 @@
             // 
             // btnStatistics
             // 
-            this.btnStatistics.Location = new System.Drawing.Point(680, 99);
+            this.btnStatistics.Location = new System.Drawing.Point(865, 98);
             this.btnStatistics.Name = "btnStatistics";
-            this.btnStatistics.Size = new System.Drawing.Size(184, 34);
+            this.btnStatistics.Size = new System.Drawing.Size(148, 34);
             this.btnStatistics.TabIndex = 3;
             this.btnStatistics.Text = "Show Statistics";
             this.btnStatistics.UseVisualStyleBackColor = true;
@@ -91,21 +93,21 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(265, 149);
+            this.txtFirstName.Location = new System.Drawing.Point(265, 209);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(150, 31);
             this.txtFirstName.TabIndex = 4;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(265, 188);
+            this.txtLastName.Location = new System.Drawing.Point(265, 248);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(150, 31);
             this.txtLastName.TabIndex = 5;
             // 
             // txtNumberOfTickets
             // 
-            this.txtNumberOfTickets.Location = new System.Drawing.Point(265, 225);
+            this.txtNumberOfTickets.Location = new System.Drawing.Point(265, 285);
             this.txtNumberOfTickets.Name = "txtNumberOfTickets";
             this.txtNumberOfTickets.Size = new System.Drawing.Size(150, 31);
             this.txtNumberOfTickets.TabIndex = 6;
@@ -113,7 +115,7 @@
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(74, 152);
+            this.lblFirstName.Location = new System.Drawing.Point(74, 212);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(101, 25);
             this.lblFirstName.TabIndex = 14;
@@ -122,7 +124,7 @@
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(74, 194);
+            this.lblLastName.Location = new System.Drawing.Point(74, 254);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(99, 25);
             this.lblLastName.TabIndex = 8;
@@ -131,7 +133,7 @@
             // lblNumberOfTickets
             // 
             this.lblNumberOfTickets.AutoSize = true;
-            this.lblNumberOfTickets.Location = new System.Drawing.Point(74, 231);
+            this.lblNumberOfTickets.Location = new System.Drawing.Point(74, 291);
             this.lblNumberOfTickets.Name = "lblNumberOfTickets";
             this.lblNumberOfTickets.Size = new System.Drawing.Size(161, 25);
             this.lblNumberOfTickets.TabIndex = 9;
@@ -142,7 +144,7 @@
             this.txtStatistics.Location = new System.Drawing.Point(1045, 161);
             this.txtStatistics.Multiline = true;
             this.txtStatistics.Name = "txtStatistics";
-            this.txtStatistics.Size = new System.Drawing.Size(254, 526);
+            this.txtStatistics.Size = new System.Drawing.Size(254, 554);
             this.txtStatistics.TabIndex = 10;
             this.txtStatistics.TextChanged += new System.EventHandler(this.txtStatistics_TextChanged);
             // 
@@ -155,7 +157,7 @@
             // 
             // txtPrices
             // 
-            this.txtPrices.Location = new System.Drawing.Point(74, 422);
+            this.txtPrices.Location = new System.Drawing.Point(74, 455);
             this.txtPrices.Multiline = true;
             this.txtPrices.Name = "txtPrices";
             this.txtPrices.Size = new System.Drawing.Size(341, 260);
@@ -163,7 +165,7 @@
             // 
             // formsPlot1
             // 
-            this.formsPlot1.Location = new System.Drawing.Point(496, 141);
+            this.formsPlot1.Location = new System.Drawing.Point(496, 140);
             this.formsPlot1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.formsPlot1.Name = "formsPlot1";
             this.formsPlot1.Size = new System.Drawing.Size(540, 582);
@@ -171,7 +173,7 @@
             // 
             // txtInvoiceNumber
             // 
-            this.txtInvoiceNumber.Location = new System.Drawing.Point(265, 262);
+            this.txtInvoiceNumber.Location = new System.Drawing.Point(265, 322);
             this.txtInvoiceNumber.Name = "txtInvoiceNumber";
             this.txtInvoiceNumber.Size = new System.Drawing.Size(150, 31);
             this.txtInvoiceNumber.TabIndex = 7;
@@ -179,7 +181,7 @@
             // lblInvoiceNumber
             // 
             this.lblInvoiceNumber.AutoSize = true;
-            this.lblInvoiceNumber.Location = new System.Drawing.Point(74, 268);
+            this.lblInvoiceNumber.Location = new System.Drawing.Point(74, 328);
             this.lblInvoiceNumber.Name = "lblInvoiceNumber";
             this.lblInvoiceNumber.Size = new System.Drawing.Size(101, 25);
             this.lblInvoiceNumber.TabIndex = 15;
@@ -212,11 +214,36 @@
             this.lblPercentage.TabIndex = 18;
             this.lblPercentage.Text = "Share (%)";
             // 
+            // cboPeriod
+            // 
+            this.cboPeriod.FormattingEnabled = true;
+            this.cboPeriod.Items.AddRange(new object[] {
+            "All Periods",
+            "Last Month",
+            "Last Week",
+            "Last Day"});
+            this.cboPeriod.Location = new System.Drawing.Point(677, 98);
+            this.cboPeriod.Name = "cboPeriod";
+            this.cboPeriod.Size = new System.Drawing.Size(182, 33);
+            this.cboPeriod.TabIndex = 19;
+            this.cboPeriod.Text = "All Periods";
+            // 
+            // lblPeriod
+            // 
+            this.lblPeriod.AutoSize = true;
+            this.lblPeriod.Location = new System.Drawing.Point(543, 104);
+            this.lblPeriod.Name = "lblPeriod";
+            this.lblPeriod.Size = new System.Drawing.Size(131, 25);
+            this.lblPeriod.TabIndex = 20;
+            this.lblPeriod.Text = "Choose Period:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1329, 727);
+            this.Controls.Add(this.lblPeriod);
+            this.Controls.Add(this.cboPeriod);
             this.Controls.Add(this.lblPercentage);
             this.Controls.Add(this.lblCount);
             this.Controls.Add(this.lblNumber);
@@ -264,5 +291,7 @@
         private Label lblNumber;
         private Label lblCount;
         private Label lblPercentage;
+        private ComboBox cboPeriod;
+        private Label lblPeriod;
     }
 }

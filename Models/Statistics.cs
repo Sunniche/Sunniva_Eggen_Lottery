@@ -116,8 +116,9 @@ namespace Sunniva_Eggen_Appolonia.Models
                 draws.ListOfDraws.Add(draw);
             }
         }
-        
-        public void CountRepartitionOfNumbers()
+
+
+        public void CountRepartitionOfNumbers(DateTime filteredDate)
         {
             int numberOfOnes = 0;
             int numberOfTwos = 0;
@@ -142,75 +143,79 @@ namespace Sunniva_Eggen_Appolonia.Models
 
             foreach (Draw d in draws.ListOfDraws)
             {
-                foreach (int number in d.Numbers)
+                if (d.LocalTime>filteredDate)
                 {
-                    TotalNumbers++;
-                    switch (number)
+                    foreach (int number in d.Numbers)
                     {
-                        case 1:
-                            numberOfOnes++;
-                            break;
-                        case 2:
-                            numberOfTwos++;
-                            break;
-                        case 3:
-                            numberOfThrees++;
-                            break;
-                        case 4:
-                            numberOfFours++;
-                            break;
-                        case 5:
-                            numberOfFives++;
-                            break;
-                        case 6:
-                            numberOfSixes++;
-                            break;
-                        case 7:
-                            numberOfSevens++;
-                            break;
-                        case 8:
-                            numberOfEights++;
-                            break;
-                        case 9:
-                            numberOfNines++;
-                            break;
-                        case 10:
-                            numberOfTens++;
-                            break;
-                        case 11:
-                            numberOfElevens++;
-                            break;
-                        case 12:
-                            numberOfTwelves++;
-                            break;
-                        case 13:
-                            numberOfThirteens++;
-                            break;
-                        case 14:
-                            numberOfFourteens++;
-                            break;
-                        case 15:
-                            numberOfFifteens++;
-                            break;
-                        case 16:
-                            numberOfSixteens++;
-                            break;
-                        case 17:
-                            numberOfSeventeens++;
-                            break;
-                        case 18:
-                            numberOfEighteens++;
-                            break;
-                        case 19:
-                            numberOfNineteens++;
-                            break;
-                        case 20:
-                            numberOfTwenties++;
-                            break;
-                        default:
-                            break;
+                        TotalNumbers++;
+                        switch (number)
+                        {
+                            case 1:
+                                numberOfOnes++;
+                                break;
+                            case 2:
+                                numberOfTwos++;
+                                break;
+                            case 3:
+                                numberOfThrees++;
+                                break;
+                            case 4:
+                                numberOfFours++;
+                                break;
+                            case 5:
+                                numberOfFives++;
+                                break;
+                            case 6:
+                                numberOfSixes++;
+                                break;
+                            case 7:
+                                numberOfSevens++;
+                                break;
+                            case 8:
+                                numberOfEights++;
+                                break;
+                            case 9:
+                                numberOfNines++;
+                                break;
+                            case 10:
+                                numberOfTens++;
+                                break;
+                            case 11:
+                                numberOfElevens++;
+                                break;
+                            case 12:
+                                numberOfTwelves++;
+                                break;
+                            case 13:
+                                numberOfThirteens++;
+                                break;
+                            case 14:
+                                numberOfFourteens++;
+                                break;
+                            case 15:
+                                numberOfFifteens++;
+                                break;
+                            case 16:
+                                numberOfSixteens++;
+                                break;
+                            case 17:
+                                numberOfSeventeens++;
+                                break;
+                            case 18:
+                                numberOfEighteens++;
+                                break;
+                            case 19:
+                                numberOfNineteens++;
+                                break;
+                            case 20:
+                                numberOfTwenties++;
+                                break;
+                            default:
+                                break;
+                        }
                     }
                 }
+                
             }
             ListOfDrawsPerNumber.Add(numberOfOnes);
             ListOfDrawsPerNumber.Add(numberOfTwos);
@@ -233,7 +238,124 @@ namespace Sunniva_Eggen_Appolonia.Models
             ListOfDrawsPerNumber.Add(numberOfNineteens);
             ListOfDrawsPerNumber.Add(numberOfTwenties);
         }
-    
+
+        //public void CountRepartitionOfNumbers()
+        //{
+        //    int numberOfOnes = 0;
+        //    int numberOfTwos = 0;
+        //    int numberOfThrees = 0;
+        //    int numberOfFours = 0;
+        //    int numberOfFives = 0;
+        //    int numberOfSixes = 0;
+        //    int numberOfSevens = 0;
+        //    int numberOfEights = 0;
+        //    int numberOfNines = 0;
+        //    int numberOfTens = 0;
+        //    int numberOfElevens = 0;
+        //    int numberOfTwelves = 0;
+        //    int numberOfThirteens = 0;
+        //    int numberOfFourteens = 0;
+        //    int numberOfFifteens = 0;
+        //    int numberOfSixteens = 0;
+        //    int numberOfSeventeens = 0;
+        //    int numberOfEighteens = 0;
+        //    int numberOfNineteens = 0;
+        //    int numberOfTwenties = 0;
+
+        //    foreach (Draw d in draws.ListOfDraws)
+        //    {
+        //        foreach (int number in d.Numbers)
+        //        {
+        //            TotalNumbers++;
+        //            switch (number)
+        //            {
+        //                case 1:
+        //                    numberOfOnes++;
+        //                    break;
+        //                case 2:
+        //                    numberOfTwos++;
+        //                    break;
+        //                case 3:
+        //                    numberOfThrees++;
+        //                    break;
+        //                case 4:
+        //                    numberOfFours++;
+        //                    break;
+        //                case 5:
+        //                    numberOfFives++;
+        //                    break;
+        //                case 6:
+        //                    numberOfSixes++;
+        //                    break;
+        //                case 7:
+        //                    numberOfSevens++;
+        //                    break;
+        //                case 8:
+        //                    numberOfEights++;
+        //                    break;
+        //                case 9:
+        //                    numberOfNines++;
+        //                    break;
+        //                case 10:
+        //                    numberOfTens++;
+        //                    break;
+        //                case 11:
+        //                    numberOfElevens++;
+        //                    break;
+        //                case 12:
+        //                    numberOfTwelves++;
+        //                    break;
+        //                case 13:
+        //                    numberOfThirteens++;
+        //                    break;
+        //                case 14:
+        //                    numberOfFourteens++;
+        //                    break;
+        //                case 15:
+        //                    numberOfFifteens++;
+        //                    break;
+        //                case 16:
+        //                    numberOfSixteens++;
+        //                    break;
+        //                case 17:
+        //                    numberOfSeventeens++;
+        //                    break;
+        //                case 18:
+        //                    numberOfEighteens++;
+        //                    break;
+        //                case 19:
+        //                    numberOfNineteens++;
+        //                    break;
+        //                case 20:
+        //                    numberOfTwenties++;
+        //                    break;
+        //                default:
+        //                    break;
+        //            }
+        //        }
+        //    }
+        //    ListOfDrawsPerNumber.Add(numberOfOnes);
+        //    ListOfDrawsPerNumber.Add(numberOfTwos);
+        //    ListOfDrawsPerNumber.Add(numberOfThrees);
+        //    ListOfDrawsPerNumber.Add(numberOfFours);
+        //    ListOfDrawsPerNumber.Add(numberOfFives);
+        //    ListOfDrawsPerNumber.Add(numberOfSixes);
+        //    ListOfDrawsPerNumber.Add(numberOfSevens);
+        //    ListOfDrawsPerNumber.Add(numberOfEights);
+        //    ListOfDrawsPerNumber.Add(numberOfNines);
+        //    ListOfDrawsPerNumber.Add(numberOfTens);
+        //    ListOfDrawsPerNumber.Add(numberOfElevens);
+        //    ListOfDrawsPerNumber.Add(numberOfTwelves);
+        //    ListOfDrawsPerNumber.Add(numberOfThirteens);
+        //    ListOfDrawsPerNumber.Add(numberOfFourteens);
+        //    ListOfDrawsPerNumber.Add(numberOfFifteens);
+        //    ListOfDrawsPerNumber.Add(numberOfSixteens);
+        //    ListOfDrawsPerNumber.Add(numberOfSeventeens);
+        //    ListOfDrawsPerNumber.Add(numberOfEighteens);
+        //    ListOfDrawsPerNumber.Add(numberOfNineteens);
+        //    ListOfDrawsPerNumber.Add(numberOfTwenties);
+        //}
+
         public void CalculatePercentages()
         {
             double onesInPercentage = ListOfDrawsPerNumber[0] / TotalNumbers * 100;
